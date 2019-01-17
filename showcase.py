@@ -38,13 +38,13 @@ for line in f:
 
 f.close()
 
-print("------------------------------------------------------------------------------")
+print("------------------------------------------")
 
 # displaying team scores unsorted
 for team in team_scores:
     print('team name: ' + team + '. team score: ' + str(team_scores[team]))
 
-print("------------------------------------------------------------------------------")
+print("------------------------------------------")
 
 # sorting based on score
 sorted_team_scores = [v[0] for v in sorted(
@@ -55,7 +55,7 @@ for teams in sorted_team_scores:
     print(sorted_team_scores[i])
     i += 1
 
-print("------------------------------------------------------------------------------")
+print("------------------------------------------")
 
 # final result
 i = 0
