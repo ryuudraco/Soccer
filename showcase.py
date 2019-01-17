@@ -57,10 +57,15 @@ for teams in sorted_team_scores:
 
 print("------------------------------------------")
 
-# final result
 i = 0
+previous_rank = 0
+previous_score = -1
+current_rank = 0
 for teams in sorted_team_scores:
-    rank = i + 1
-    print(str(rank) + ". " +
-          sorted_team_scores[i] + " " + str(team_scores[teams]))
+    current_score = team_scores[teams]
+    if (current_score != previous_score):
+        current_rank += 1
+    print(str(current_rank) + ". " +
+          sorted_team_scores[i] + " " + str(current_score))
     i += 1
+    previous_score = current_score
